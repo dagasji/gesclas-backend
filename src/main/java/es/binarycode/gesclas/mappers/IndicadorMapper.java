@@ -9,7 +9,7 @@ import es.binarycode.gesclas.dto.IndicadorDTO;
 import es.binarycode.gesclas.entity.Indicador;
 
 @Mapper(componentModel="spring")
-public interface IndicadorMapper {
+public interface IndicadorMapper extends GenericMapper<IndicadorDTO, Indicador> {
 	IndicadorMapper INSTANCE = Mappers.getMapper( IndicadorMapper.class );
     
 	IndicadorDTO entityToDTO(Indicador driver); 

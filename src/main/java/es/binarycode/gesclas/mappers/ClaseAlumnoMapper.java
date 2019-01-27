@@ -9,7 +9,7 @@ import es.binarycode.gesclas.dto.ClaseAlumnoDTO;
 import es.binarycode.gesclas.entity.ClaseAlumno;
 
 @Mapper(componentModel="spring")
-public interface ClaseAlumnoMapper {
+public interface ClaseAlumnoMapper extends GenericMapper<ClaseAlumnoDTO, ClaseAlumno>{
 	ClaseAlumnoMapper INSTANCE = Mappers.getMapper( ClaseAlumnoMapper.class );
     
 	ClaseAlumnoDTO entityToDTO(ClaseAlumno driver); 

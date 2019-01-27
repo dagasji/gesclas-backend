@@ -9,7 +9,9 @@ import es.binarycode.gesclas.dto.TemaIndicadorInstrumentoDTO;
 import es.binarycode.gesclas.entity.TemaIndicadorInstrumento;
 
 @Mapper(componentModel="spring")
-public interface TemaIndicadorInstrumentoMapper {
+public interface TemaIndicadorInstrumentoMapper 
+		extends GenericMapper<TemaIndicadorInstrumentoDTO, TemaIndicadorInstrumento>{
+	
 	TemaIndicadorInstrumentoMapper INSTANCE = Mappers.getMapper( TemaIndicadorInstrumentoMapper.class );
     
 	TemaIndicadorInstrumentoDTO entityToDTO(TemaIndicadorInstrumento driver); 

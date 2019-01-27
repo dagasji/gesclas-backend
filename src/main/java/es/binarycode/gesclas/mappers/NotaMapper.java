@@ -9,7 +9,8 @@ import es.binarycode.gesclas.dto.NotaDTO;
 import es.binarycode.gesclas.entity.Nota;
 
 @Mapper(componentModel="spring")
-public interface NotaMapper {
+public interface NotaMapper extends GenericMapper<NotaDTO, Nota>{
+	
 	NotaMapper INSTANCE = Mappers.getMapper( NotaMapper.class );
     
 	NotaDTO entityToDTO(Nota driver); 

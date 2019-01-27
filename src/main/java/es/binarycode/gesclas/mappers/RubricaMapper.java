@@ -9,7 +9,7 @@ import es.binarycode.gesclas.dto.RubricaDTO;
 import es.binarycode.gesclas.entity.Rubrica;
 
 @Mapper(componentModel="spring")
-public interface RubricaMapper {
+public interface RubricaMapper extends GenericMapper<RubricaDTO, Rubrica>{
 	RubricaMapper INSTANCE = Mappers.getMapper( RubricaMapper.class );
     
 	RubricaDTO entityToDTO(Rubrica driver); 
