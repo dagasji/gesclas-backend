@@ -3,7 +3,9 @@ package es.binarycode.gesclas.entity;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
 
+@MappedSuperclass
 public abstract class AbstractEntity {
 
 	

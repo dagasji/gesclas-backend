@@ -1,11 +1,15 @@
 package es.binarycode.gesclas.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="TIPO_CLASE")
@@ -18,6 +22,8 @@ public class TipoClase extends AbstractEntity{
 	
 	@Column(name="DS_TIPO_CLASE")
 	private String tipoClase;
+	
+	
 
 	public Integer getIdTipoClase() {
 		return idTipoClase;
@@ -59,7 +65,10 @@ public class TipoClase extends AbstractEntity{
 			return false;
 		return true;
 	}
-	
-		
+
+	@Override
+	public String toString() {
+		return "TipoClase [idTipoClase=" + idTipoClase + ", tipoClase=" + tipoClase + "]";
+	}		
 	
 }

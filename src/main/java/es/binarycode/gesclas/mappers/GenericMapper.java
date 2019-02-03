@@ -2,10 +2,9 @@ package es.binarycode.gesclas.mappers;
 
 import java.util.List;
 
-import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(componentModel="spring")
+
 public interface GenericMapper<E, T> {
 	GenericMapper INSTANCE = Mappers.getMapper( GenericMapper.class );
     
