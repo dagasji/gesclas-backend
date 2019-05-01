@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
-@MappedSuperclass
+//@MappedSuperclass
 public abstract class AbstractEntity {
 
 	

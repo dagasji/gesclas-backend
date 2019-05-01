@@ -15,21 +15,21 @@
 
 
 	<dependencies>
-		<!--<dependency>
+		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.11</version>
-		</dependency>-->
-		<dependency>
-            <groupId>org.xerial</groupId>
-            <artifactId>sqlite-jdbc</artifactId>
-            <version>3.16.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.zsoltfabok</groupId>
-            <artifactId>sqlite-dialect</artifactId>
-            <version>1.0</version>
-        </dependency>
+ 		</dependency>
+<!-- 		<dependency> -->
+<!--             <groupId>org.xerial</groupId> -->
+<!--             <artifactId>sqlite-jdbc</artifactId> -->
+<!--             <version>3.16.1</version> -->
+<!--         </dependency> -->
+<!--         <dependency> -->
+<!--             <groupId>com.zsoltfabok</groupId> -->
+<!--             <artifactId>sqlite-dialect</artifactId> -->
+<!--             <version>1.0</version> -->
+<!--         </dependency> -->
 		<!-- junit -->
 		<dependency>
 			<groupId>junit</groupId>

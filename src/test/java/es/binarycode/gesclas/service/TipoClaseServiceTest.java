@@ -1,37 +1,46 @@
-package es.binarycode.gesclas;
+package es.binarycode.gesclas.service;
 
 import java.util.Date;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
+import es.binarycode.gesclas.Application;
 import es.binarycode.gesclas.dto.TipoClaseDTO;
 import es.binarycode.gesclas.services.TipoClaseService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
+@Transactional
 public class TipoClaseServiceTest {
+	
+	private static final Logger logger = LoggerFactory.getLogger(TipoClaseServiceTest.class);
 
 	@Autowired
-	TipoClaseService tipoClaseService;
+	private TipoClaseService tipoClaseService;
 
 
-	@Test
-	public void getFindId() {
-		Assert.assertEquals("Primaria", tipoClaseService.findById(1).getTipoClase());
+	@Test 
+	public void testFindById() {
+		TipoClaseDTO tipoClase = tipoClaseService.findById(1);
+		logger.info(tipoClase.toString());
+		Assert.assertEquals("Primaria", tipoClase.getTipoClase());
 	} 
 	
 	@Test
-	public void getFindAll() {
+	public void testFindAll() {
 		Assert.assertEquals(2, tipoClaseService.findAll().size());
 	} 
 	
 	@Test
-	public void getAddTipoClase() {
+	public void testAddTipoClase() {
 		
 		TipoClaseDTO tipoClase = new TipoClaseDTO();
 		tipoClase.setTipoClase("Prueba");

@@ -34,7 +34,7 @@ public class Clase extends AbstractEntity {
 	private String observaciones;
 	
 	@Column(name="ID_USUARIO")
-	private String idUsuario;	
+	private Integer idUsuario;	
 
 	public Integer getIdClase() {
 		return idClase;
@@ -103,11 +103,11 @@ public class Clase extends AbstractEntity {
 		return true;
 	}
 
-	public String getIdUsuario() {
+	public Integer getIdUsuario() {
 		return idUsuario;
 	}
 
-	public void setIdUsuario(String idUsuario) {
+	public void setIdUsuario(Integer idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 	

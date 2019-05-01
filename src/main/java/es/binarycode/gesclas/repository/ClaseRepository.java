@@ -1,6 +1,8 @@
 package es.binarycode.gesclas.repository;
 
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 import es.binarycode.gesclas.entity.Clase;
@@ -16,5 +18,7 @@ import es.binarycode.gesclas.entity.Clase;
  *
  */
 public interface ClaseRepository extends CrudRepository<Clase,Integer>{
+	
+	public List<Clase> findByidUsuario(Integer idUsuario);
 
 }

@@ -29,6 +29,9 @@ public class AuthController {
 		req.setToken(authentication
 				.login(req.getUsername(),req.getPassword())
 				.orElseThrow(() -> new RuntimeException("invalid login and/or password")));
+		
+		req.setPassword("");
+		
 		return req;
 	}
 

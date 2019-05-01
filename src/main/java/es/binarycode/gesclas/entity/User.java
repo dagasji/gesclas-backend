@@ -21,6 +21,9 @@ public class User {
 
 	@Column
 	private String role;
+	
+	@Column
+	private Integer idUsuario;
 
 	
 	public String getEmail() {
@@ -101,6 +104,14 @@ public class User {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+
+	public Integer getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Integer idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 
 

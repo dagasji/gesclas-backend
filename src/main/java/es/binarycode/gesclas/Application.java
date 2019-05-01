@@ -35,7 +35,7 @@ public class Application {
 	
 	@PostConstruct
 	void started() {
-		TimeZone.setDefault(TimeZone.getTimeZone("GMT-3"));
+		TimeZone.setDefault(TimeZone.getTimeZone("GMT+2"));
 		// Set now date for testing.
 
 //		if (this.isTesting) {

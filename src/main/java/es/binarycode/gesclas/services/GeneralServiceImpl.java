@@ -45,7 +45,7 @@ public abstract class GeneralServiceImpl<E, T> implements GeneralService<E, T>{
 		List<E> listaDTO = this.getMapper().listToDTOList(list);
 		
 		return listaDTO;
-	}
+	}	
 
 	@Override
 	public void update(E dto) {
@@ -76,5 +76,13 @@ public abstract class GeneralServiceImpl<E, T> implements GeneralService<E, T>{
 		logger.info("[" + this.getClass() + "] " + "delete entity " + entity.toString());
 		
 		
+	}
+
+	public CrudRepository<T, Integer> getRepo() {
+		return repo;
+	}
+
+	public void setRepo(CrudRepository<T, Integer> repo) {
+		this.repo = repo;
 	}
 }

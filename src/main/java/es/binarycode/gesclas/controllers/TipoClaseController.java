@@ -15,7 +15,7 @@ import es.binarycode.gesclas.services.TipoClaseService;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/public/tipoclase")
+@RequestMapping("/private/tipoclase")
 public class TipoClaseController {
 
 	private static final Logger logger = LoggerFactory.getLogger(TipoClaseController.class);
@@ -37,9 +37,6 @@ public class TipoClaseController {
 		}
 		return returnList; 
   	}
-  	
-  	
- 
 
 
 	public TipoClaseService getTipoClaseService() {

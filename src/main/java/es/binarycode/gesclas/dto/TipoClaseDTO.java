@@ -1,5 +1,7 @@
 package es.binarycode.gesclas.dto;
 
+import java.util.Date;
+
 public class TipoClaseDTO extends GenericDTO{
 	
 	private Integer idTipoClase;
@@ -51,6 +53,6 @@ public class TipoClaseDTO extends GenericDTO{
 	public String toString() {
 		return "TipoClaseDTO [idTipoClase=" + idTipoClase + ", tipoClase=" + tipoClase + "]";
 	}
-	
+
 			
 }
