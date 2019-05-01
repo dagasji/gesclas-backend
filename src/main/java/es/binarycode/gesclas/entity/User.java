@@ -6,8 +6,11 @@ import javax.persistence.Id;
 
 @Entity(name = "users")
 public class User {
-
+	
 	@Id
+	private Integer idUsuario;
+
+	@Column
 	private String username;
 	
 	@Column
@@ -22,8 +25,7 @@ public class User {
 	@Column
 	private String role;
 	
-	@Column
-	private Integer idUsuario;
+
 
 	
 	public String getEmail() {
